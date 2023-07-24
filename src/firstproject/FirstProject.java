@@ -46,7 +46,7 @@ public class FirstProject
 					}
 					else 
 					{	
-						computer.doDamage(player);
+						player.doDamage(computer);
 						System.out.println(player.getName() + " has attacked " + computer.getName() + " for " + player.getDamage() + " damage.");
 						System.out.println(computer.getName() + " has " + computer.getHealth() + " health remaining.");
 					}
@@ -89,7 +89,7 @@ public class FirstProject
 					}	
 					else
 					{	
-						player.doDamage(computer);
+						computer.doDamage(player);
 						System.out.println(computer.getName() + " has attacked " + player.getName() + " for " + computer.getDamage() + " damage.");
 						System.out.println(player.getName() + " has " + player.getHealth() + " health remaining.");
 					}
@@ -100,22 +100,22 @@ public class FirstProject
 					}
 				}
 				computer.setDamage(10);
-				
+			}	
 				//Computer Defend
-				if (turn != 1)
-				{
-					player.setDamageDefend(2);
-					System.out.println(computer.getName() + " has defended and reduced " + player.getName() + "'s next attack.");
-				}
-				
+			if (turn == 2)
+			{
+				player.setDamageDefend(2);
+				System.out.println(computer.getName() + " has defended and reduced " + player.getName() + "'s next attack.");
 			}
-			System.out.println();
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println();
-			System.out.println(player.getName() + "'s turn");
+				
 		}
+		System.out.println();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println();
+		System.out.println(player.getName() + "'s turn");
 	}
 }
+
 		
 		/*
 		Scanner input = new Scanner(System.in);		

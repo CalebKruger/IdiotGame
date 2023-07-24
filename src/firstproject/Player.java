@@ -38,7 +38,7 @@ public class Player
 	
 	public void doDamage(Player other)
 	{
-		this.health -= other.getDamage();
+		other.health -= this.getDamage();
 	}
 	
 	public int getDamage()
